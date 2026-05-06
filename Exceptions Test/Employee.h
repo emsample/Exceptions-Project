@@ -12,6 +12,7 @@ private:
     string hireDate;
 
 public:
+    class InvalidEmployeeNumber {};
     Employee();
     Employee(string n, int num, string date);
 
