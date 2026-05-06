@@ -15,33 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\ProductionWorker.h">
+    <ClInclude Include="TeamLeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\ShiftSupervisor.h">
+    <ClInclude Include="Employee.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\TeamLeader.h">
+    <ClInclude Include="ProductionWorker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\Employee.h">
+    <ClInclude Include="ShiftSupervisor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\TeamLeader.cpp">
+    <ClCompile Include="Employee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\ProductionWorker.cpp">
+    <ClCompile Include="ProductionWorker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\ShiftSupervisor.cpp">
+    <ClCompile Include="ShiftSupervisor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\Employee.cpp">
+    <ClCompile Include="TeamLeader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

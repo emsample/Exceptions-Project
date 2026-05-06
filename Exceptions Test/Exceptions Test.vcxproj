@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="ProductionWorker.h" />
+    <ClInclude Include="ShiftSupervisor.h" />
+    <ClInclude Include="TeamLeader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ProductionWorker.cpp" />
+    <ClCompile Include="ShiftSupervisor.cpp" />
+    <ClCompile Include="TeamLeader.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -122,19 +135,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\Employee.h" />
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\ProductionWorker.h" />
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\ShiftSupervisor.h" />
-    <ClInclude Include="..\..\Factory Workers\Factory Workers\TeamLeader.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\Employee.cpp" />
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\main.cpp" />
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\ProductionWorker.cpp" />
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\ShiftSupervisor.cpp" />
-    <ClCompile Include="..\..\Factory Workers\Factory Workers\TeamLeader.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
