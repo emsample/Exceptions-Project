@@ -11,7 +11,7 @@ Employee::Employee()
 Employee::Employee(string n, int num, string date)
 {
     name = n;
-    employeeNumber = num;
+    setEmployeeNumber(num);
     hireDate = date;
 }
 
@@ -26,6 +26,9 @@ void Employee::setName(string n)
 // POST: employeeNumber updated
 void Employee::setEmployeeNumber(int num)
 {
+    if (num < 0 || num > 9999)
+        throw Employee::InvalidEmployeeNumber();
+
     employeeNumber = num;
 }
 

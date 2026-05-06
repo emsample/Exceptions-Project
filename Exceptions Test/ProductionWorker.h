@@ -10,6 +10,10 @@ private:
     double hourlyPayRate;
 
 public:
+
+    class InvalidShift {};
+    class InvalidPayRate {};
+
     // PRE: none
     // POST: shift=1, hourlyPayRate=0
     ProductionWorker();

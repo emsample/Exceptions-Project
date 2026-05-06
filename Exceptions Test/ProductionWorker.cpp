@@ -16,14 +16,16 @@ ProductionWorker::ProductionWorker() : Employee()
 ProductionWorker::ProductionWorker(string n, int num, string date, int s, double rate)
     : Employee(n, num, date)
 {
-    shift = s;
-    hourlyPayRate = rate;
+    setShift(s);
+    setHourlyPayRate(rate);
 }
 
 // PRE: s is 1 or 2
 // POST: shift updated
 void ProductionWorker::setShift(int s)
 {
+    if (s != 1 && s != 2)
+        throw InvalidShift();
     shift = s;
 }
 
@@ -31,6 +33,8 @@ void ProductionWorker::setShift(int s)
 // POST: hourlyPayRate updated
 void ProductionWorker::setHourlyPayRate(double rate)
 {
+    if (rate < 0)
+        throw InvalidPayRate();
     hourlyPayRate = rate;
 }
 
