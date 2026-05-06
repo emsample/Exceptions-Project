@@ -82,6 +82,86 @@ void createProductionWorker()
     cout << "\nEmployee created:\n";
     worker.printProductionWorker();
 }
+void createShiftSupervisor()
+{
+    string name, hireDate;
+    int number;
+    double salary, bonus;
+
+    getEmployeeData(name, number, hireDate);
+
+    cout << "Enter annual salary: ";
+    cin >> salary;
+
+    cout << "Enter annual bonus: ";
+    cin >> bonus;
+    cin.ignore();
+
+    ShiftSupervisor s(name, number, hireDate, salary, bonus);
+
+    cout << "\nEmployee created:\n";
+    s.printShiftSupervisor();
+}
+void createTeamLeader()
+{
+    string name, hireDate;
+    int number, shift, req, att;
+    double payRate, bonus;
+
+    getEmployeeData(name, number, hireDate);
+
+    TeamLeader t;
+    t.setName(name);
+    t.setEmployeeNumber(number);
+    t.setHireDate(hireDate);
+
+    while (true)
+    {
+        try
+        {
+            cout << "Enter shift (1=Day, 2=Night): ";
+            cin >> shift;
+            t.setShift(shift);
+            break;
+        }
+        catch (ProductionWorker::InvalidShift)
+        {
+            cout << "Invalid shift. Try again.\n";
+        }
+    }
+
+    while (true)
+    {
+        try
+        {
+            cout << "Enter hourly pay rate: ";
+            cin >> payRate;
+            t.setHourlyPayRate(payRate);
+            break;
+        }
+        catch (ProductionWorker::InvalidPayRate)
+        {
+            cout << "Invalid pay rate. Try again.\n";
+        }
+    }
+
+    cout << "Enter monthly bonus: ";
+    cin >> bonus;
+
+    cout << "Enter required training hours: ";
+    cin >> req;
+
+    cout << "Enter attended training hours: ";
+    cin >> att;
+    cin.ignore();
+
+    t.setMonthlyBonus(bonus);
+    t.setRequiredTrainingHours(req);
+    t.setAttendedTrainingHours(att);
+
+    cout << "\nEmployee created:\n";
+    t.printTeamLeader();
+}
 int main()
 {
    
