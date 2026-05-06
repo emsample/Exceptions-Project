@@ -34,6 +34,54 @@ void getEmployeeData(string& name, int& number, string& hireDate)
     getline(cin, hireDate);
 }
 
+void createProductionWorker()
+{
+    string name, hireDate;
+    int number, shift;
+    double payRate;
+
+    getEmployeeData(name, number, hireDate);
+
+    ProductionWorker worker;
+    worker.setName(name);
+    worker.setEmployeeNumber(number);
+    worker.setHireDate(hireDate);
+
+    while (true)
+    {
+        try
+        {
+            cout << "Enter shift (1=Day, 2=Night): ";
+            cin >> shift;
+            worker.setShift(shift);
+            break;
+        }
+        catch (ProductionWorker::InvalidShift)
+        {
+            cout << "Invalid shift. Try again.\n";
+        }
+    }
+
+    while (true)
+    {
+        try
+        {
+            cout << "Enter hourly pay rate: ";
+            cin >> payRate;
+            cin.ignore();
+
+            worker.setHourlyPayRate(payRate);
+            break;
+        }
+        catch (ProductionWorker::InvalidPayRate)
+        {
+            cout << "Invalid pay rate. Try again.\n";
+        }
+    }
+
+    cout << "\nEmployee created:\n";
+    worker.printProductionWorker();
+}
 int main()
 {
    
