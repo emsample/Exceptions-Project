@@ -164,5 +164,39 @@ void createTeamLeader()
 }
 int main()
 {
-   
+    int choice;
+
+    do
+    {
+        cout << "\n--- Factory Worker Menu ---\n";
+        cout << "1. Add Production Worker\n";
+        cout << "2. Add Shift Supervisor\n";
+        cout << "3. Add Team Leader\n";
+        cout << "4. Exit\n";
+        cout << "Choice: ";
+
+        cin >> choice;
+        cin.ignore();
+
+        switch (choice)
+        {
+        case 1:
+            createProductionWorker();
+            break;
+        case 2:
+            createShiftSupervisor();
+            break;
+        case 3:
+            createTeamLeader();
+            break;
+        case 4:
+            cout << "Exiting...\n";
+            break;
+        default:
+            cout << "Invalid option.\n";
+        }
+
+    } while (choice != 4);
+
+    return 0;
 }

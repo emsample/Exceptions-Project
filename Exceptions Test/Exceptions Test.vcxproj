@@ -26,8 +26,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ProductionWorker.cpp" />
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ProductionWorker.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ShiftSupervisor.cpp" />
     <ClCompile Include="TeamLeader.cpp" />
   </ItemGroup>
